@@ -1,0 +1,2567 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="pt-BR">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashund - O doguinho que corre atrás do SEO que o React esqueceu</title>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+    *,
+    ::before,
+    ::after {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style: ;
+    }
+
+    ::backdrop {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style: ;
+    }
+
+    /*
+! tailwindcss v3.4.18 | MIT License | https://tailwindcss.com
+*/
+    /*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+      /* 1 */
+      border-width: 0;
+      /* 2 */
+      border-style: solid;
+      /* 2 */
+      border-color: #e5e7eb;
+      /* 2 */
+    }
+
+    ::before,
+    ::after {
+      --tw-content: '';
+    }
+
+    /*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+    html,
+    :host {
+      line-height: 1.5;
+      /* 1 */
+      -webkit-text-size-adjust: 100%;
+      /* 2 */
+      -moz-tab-size: 4;
+      /* 3 */
+      -o-tab-size: 4;
+      tab-size: 4;
+      /* 3 */
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      /* 4 */
+      font-feature-settings: normal;
+      /* 5 */
+      font-variation-settings: normal;
+      /* 6 */
+      -webkit-tap-highlight-color: transparent;
+      /* 7 */
+    }
+
+    /*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+    body {
+      margin: 0;
+      /* 1 */
+      line-height: inherit;
+      /* 2 */
+    }
+
+    /*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+    hr {
+      height: 0;
+      /* 1 */
+      color: inherit;
+      /* 2 */
+      border-top-width: 1px;
+      /* 3 */
+    }
+
+    /*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+    abbr:where([title]) {
+      -webkit-text-decoration: underline dotted;
+      text-decoration: underline dotted;
+    }
+
+    /*
+Remove the default font size and weight for headings.
+*/
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    /*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    /*
+Add the correct font weight in Edge and Safari.
+*/
+    b,
+    strong {
+      font-weight: bolder;
+    }
+
+    /*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+    code,
+    kbd,
+    samp,
+    pre {
+      font-family: Fira Code, Consolas, Monaco, monospace;
+      /* 1 */
+      font-feature-settings: normal;
+      /* 2 */
+      font-variation-settings: normal;
+      /* 3 */
+      font-size: 1em;
+      /* 4 */
+    }
+
+    /*
+Add the correct font size in all browsers.
+*/
+    small {
+      font-size: 80%;
+    }
+
+    /*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    /*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+    table {
+      text-indent: 0;
+      /* 1 */
+      border-color: inherit;
+      /* 2 */
+      border-collapse: collapse;
+      /* 3 */
+    }
+
+    /*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      /* 1 */
+      font-feature-settings: inherit;
+      /* 1 */
+      font-variation-settings: inherit;
+      /* 1 */
+      font-size: 100%;
+      /* 1 */
+      font-weight: inherit;
+      /* 1 */
+      line-height: inherit;
+      /* 1 */
+      letter-spacing: inherit;
+      /* 1 */
+      color: inherit;
+      /* 1 */
+      margin: 0;
+      /* 2 */
+      padding: 0;
+      /* 3 */
+    }
+
+    /*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+    button,
+    select {
+      text-transform: none;
+    }
+
+    /*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+    button,
+    input:where([type='button']),
+    input:where([type='reset']),
+    input:where([type='submit']) {
+      -webkit-appearance: button;
+      /* 1 */
+      background-color: transparent;
+      /* 2 */
+      background-image: none;
+      /* 2 */
+    }
+
+    /*
+Use the modern Firefox focus style for all focusable elements.
+*/
+    :-moz-focusring {
+      outline: auto;
+    }
+
+    /*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+    :-moz-ui-invalid {
+      box-shadow: none;
+    }
+
+    /*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+    progress {
+      vertical-align: baseline;
+    }
+
+    /*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      height: auto;
+    }
+
+    /*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+    [type='search'] {
+      -webkit-appearance: textfield;
+      /* 1 */
+      outline-offset: -2px;
+      /* 2 */
+    }
+
+    /*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+    ::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    /*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      /* 1 */
+      font: inherit;
+      /* 2 */
+    }
+
+    /*
+Add the correct display in Chrome and Safari.
+*/
+    summary {
+      display: list-item;
+    }
+
+    /*
+Removes the default spacing and border for appropriate elements.
+*/
+    blockquote,
+    dl,
+    dd,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    figure,
+    p,
+    pre {
+      margin: 0;
+    }
+
+    fieldset {
+      margin: 0;
+      padding: 0;
+    }
+
+    legend {
+      padding: 0;
+    }
+
+    ol,
+    ul,
+    menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /*
+Reset default styling for dialogs.
+*/
+    dialog {
+      padding: 0;
+    }
+
+    /*
+Prevent resizing textareas horizontally by default.
+*/
+    textarea {
+      resize: vertical;
+    }
+
+    /*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+      opacity: 1;
+      /* 1 */
+      color: #9ca3af;
+      /* 2 */
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 1;
+      /* 1 */
+      color: #9ca3af;
+      /* 2 */
+    }
+
+    /*
+Set the default cursor for buttons.
+*/
+    button,
+    [role="button"] {
+      cursor: pointer;
+    }
+
+    /*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+    :disabled {
+      cursor: default;
+    }
+
+    /*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+    img,
+    svg,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
+    object {
+      display: block;
+      /* 1 */
+      vertical-align: middle;
+      /* 2 */
+    }
+
+    /*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Make elements with the HTML hidden attribute stay hidden by default */
+    [hidden]:where(:not([hidden="until-found"])) {
+      display: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+      --tw-text-opacity: 1;
+      color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        max-width: 640px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 768px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1024px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .container {
+        max-width: 1280px;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .container {
+        max-width: 1536px;
+      }
+    }
+
+    .static {
+      position: static;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .inset-0 {
+      inset: 0px;
+    }
+
+    .-bottom-2 {
+      bottom: -0.5rem;
+    }
+
+    .bottom-20 {
+      bottom: 5rem;
+    }
+
+    .left-0 {
+      left: 0px;
+    }
+
+    .left-10 {
+      left: 2.5rem;
+    }
+
+    .right-0 {
+      right: 0px;
+    }
+
+    .right-10 {
+      right: 2.5rem;
+    }
+
+    .right-4 {
+      right: 1rem;
+    }
+
+    .top-0 {
+      top: 0px;
+    }
+
+    .top-20 {
+      top: 5rem;
+    }
+
+    .top-4 {
+      top: 1rem;
+    }
+
+    .z-10 {
+      z-index: 10;
+    }
+
+    .z-50 {
+      z-index: 50;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .mb-1 {
+      margin-bottom: 0.25rem;
+    }
+
+    .mb-12 {
+      margin-bottom: 3rem;
+    }
+
+    .mb-16 {
+      margin-bottom: 4rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .mb-3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+
+    .ml-1 {
+      margin-left: 0.25rem;
+    }
+
+    .ml-4 {
+      margin-left: 1rem;
+    }
+
+    .mr-1 {
+      margin-right: 0.25rem;
+    }
+
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+
+    .mr-3 {
+      margin-right: 0.75rem;
+    }
+
+    .mt-12 {
+      margin-top: 3rem;
+    }
+
+    .mt-16 {
+      margin-top: 4rem;
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .inline-flex {
+      display: inline-flex;
+    }
+
+    .table {
+      display: table;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .h-10 {
+      height: 2.5rem;
+    }
+
+    .h-12 {
+      height: 3rem;
+    }
+
+    .h-3 {
+      height: 0.75rem;
+    }
+
+    .h-4 {
+      height: 1rem;
+    }
+
+    .h-48 {
+      height: 12rem;
+    }
+
+    .h-5 {
+      height: 1.25rem;
+    }
+
+    .h-6 {
+      height: 1.5rem;
+    }
+
+    .h-64 {
+      height: 16rem;
+    }
+
+    .h-72 {
+      height: 18rem;
+    }
+
+    .h-8 {
+      height: 2rem;
+    }
+
+    .h-96 {
+      height: 24rem;
+    }
+
+    .min-h-screen {
+      min-height: 100vh;
+    }
+
+    .w-10 {
+      width: 2.5rem;
+    }
+
+    .w-12 {
+      width: 3rem;
+    }
+
+    .w-3 {
+      width: 0.75rem;
+    }
+
+    .w-4 {
+      width: 1rem;
+    }
+
+    .w-5 {
+      width: 1.25rem;
+    }
+
+    .w-6 {
+      width: 1.5rem;
+    }
+
+    .w-64 {
+      width: 16rem;
+    }
+
+    .w-72 {
+      width: 18rem;
+    }
+
+    .w-8 {
+      width: 2rem;
+    }
+
+    .w-96 {
+      width: 24rem;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .max-w-2xl {
+      max-width: 42rem;
+    }
+
+    .max-w-3xl {
+      max-width: 48rem;
+    }
+
+    .max-w-4xl {
+      max-width: 56rem;
+    }
+
+    .max-w-5xl {
+      max-width: 64rem;
+    }
+
+    .max-w-6xl {
+      max-width: 72rem;
+    }
+
+    .max-w-none {
+      max-width: none;
+    }
+
+    .flex-1 {
+      flex: 1 1 0%;
+    }
+
+    .flex-shrink-0 {
+      flex-shrink: 0;
+    }
+
+    .flex-grow {
+      flex-grow: 1;
+    }
+
+    .transform {
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+
+      50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+
+    .animate-bounce-slow {
+      animation: bounce 3s infinite;
+    }
+
+    @keyframes pulse {
+      50% {
+        opacity: .5;
+      }
+    }
+
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .items-start {
+      align-items: flex-start;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .gap-12 {
+      gap: 3rem;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .gap-3 {
+      gap: 0.75rem;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    .gap-6 {
+      gap: 1.5rem;
+    }
+
+    .gap-8 {
+      gap: 2rem;
+    }
+
+    .space-x-2> :not([hidden])~ :not([hidden]) {
+      --tw-space-x-reverse: 0;
+      margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+      margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+
+    .space-x-3> :not([hidden])~ :not([hidden]) {
+      --tw-space-x-reverse: 0;
+      margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+      margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+
+    .space-x-8> :not([hidden])~ :not([hidden]) {
+      --tw-space-x-reverse: 0;
+      margin-right: calc(2rem * var(--tw-space-x-reverse));
+      margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+
+    .space-y-2> :not([hidden])~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+    }
+
+    .space-y-3> :not([hidden])~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+    }
+
+    .space-y-4> :not([hidden])~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+    }
+
+    .divide-y> :not([hidden])~ :not([hidden]) {
+      --tw-divide-y-reverse: 0;
+      border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+      border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+    }
+
+    .divide-gray-200> :not([hidden])~ :not([hidden]) {
+      --tw-divide-opacity: 1;
+      border-color: rgb(229 231 235 / var(--tw-divide-opacity, 1));
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .overflow-x-auto {
+      overflow-x: auto;
+    }
+
+    .whitespace-pre {
+      white-space: pre;
+    }
+
+    .rounded-2xl {
+      border-radius: 1rem;
+    }
+
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+
+    .border {
+      border-width: 1px;
+    }
+
+    .border-2 {
+      border-width: 2px;
+    }
+
+    .border-b {
+      border-bottom-width: 1px;
+    }
+
+    .border-t {
+      border-top-width: 1px;
+    }
+
+    .border-gray-100 {
+      --tw-border-opacity: 1;
+      border-color: rgb(243 244 246 / var(--tw-border-opacity, 1));
+    }
+
+    .border-gray-200 {
+      --tw-border-opacity: 1;
+      border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+    }
+
+    .border-gray-800 {
+      --tw-border-opacity: 1;
+      border-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
+    }
+
+    .border-orange-200 {
+      --tw-border-opacity: 1;
+      border-color: rgb(254 215 170 / var(--tw-border-opacity, 1));
+    }
+
+    .border-orange-600 {
+      --tw-border-opacity: 1;
+      border-color: rgb(234 88 12 / var(--tw-border-opacity, 1));
+    }
+
+    .border-red-200 {
+      --tw-border-opacity: 1;
+      border-color: rgb(254 202 202 / var(--tw-border-opacity, 1));
+    }
+
+    .border-white\/20 {
+      border-color: rgb(255 255 255 / 0.2);
+    }
+
+    .bg-gray-100 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-gray-50 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-gray-800 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-gray-900 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-gray-900\/50 {
+      background-color: rgb(17 24 39 / 0.5);
+    }
+
+    .bg-gray-950 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(3 7 18 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-green-500 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-orange-200 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(254 215 170 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-orange-300 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(253 186 116 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-orange-500 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-orange-600 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(234 88 12 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-primary-100 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 237 213 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-red-500 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-transparent {
+      background-color: transparent;
+    }
+
+    .bg-white {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-white\/10 {
+      background-color: rgb(255 255 255 / 0.1);
+    }
+
+    .bg-yellow-500 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+    }
+
+    .bg-gradient-to-br {
+      background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+    }
+
+    .bg-gradient-to-r {
+      background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    }
+
+    .from-gray-50 {
+      --tw-gradient-from: #f9fafb var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(249 250 251 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .from-orange-50 {
+      --tw-gradient-from: #fff7ed var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(255 247 237 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .from-primary-50 {
+      --tw-gradient-from: #fff7ed var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(255 247 237 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .from-primary-500 {
+      --tw-gradient-from: #f97316 var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(249 115 22 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .from-primary-600 {
+      --tw-gradient-from: #ea580c var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(234 88 12 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .via-white {
+      --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to);
+    }
+
+    .to-accent-500 {
+      --tw-gradient-to: #d97706 var(--tw-gradient-to-position);
+    }
+
+    .to-accent-600 {
+      --tw-gradient-to: #b45309 var(--tw-gradient-to-position);
+    }
+
+    .to-amber-50 {
+      --tw-gradient-to: #fffbeb var(--tw-gradient-to-position);
+    }
+
+    .to-gray-100 {
+      --tw-gradient-to: #f3f4f6 var(--tw-gradient-to-position);
+    }
+
+    .to-orange-100 {
+      --tw-gradient-to: #ffedd5 var(--tw-gradient-to-position);
+    }
+
+    .to-orange-50 {
+      --tw-gradient-to: #fff7ed var(--tw-gradient-to-position);
+    }
+
+    .bg-clip-text {
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .object-contain {
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+
+    .p-12 {
+      padding: 3rem;
+    }
+
+    .p-3 {
+      padding: 0.75rem;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .p-6 {
+      padding: 1.5rem;
+    }
+
+    .p-8 {
+      padding: 2rem;
+    }
+
+    .px-3 {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+    .py-12 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .py-16 {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .py-20 {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .py-5 {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+
+    .pb-20 {
+      padding-bottom: 5rem;
+    }
+
+    .pb-4 {
+      padding-bottom: 1rem;
+    }
+
+    .pt-32 {
+      padding-top: 8rem;
+    }
+
+    .pt-8 {
+      padding-top: 2rem;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .font-mono {
+      font-family: Fira Code, Consolas, Monaco, monospace;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+
+    .text-4xl {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+
+    .text-5xl {
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .text-6xl {
+      font-size: 3.75rem;
+      line-height: 1;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    .text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .font-medium {
+      font-weight: 500;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .leading-relaxed {
+      line-height: 1.625;
+    }
+
+    .leading-tight {
+      line-height: 1.25;
+    }
+
+    .text-gray-100 {
+      --tw-text-opacity: 1;
+      color: rgb(243 244 246 / var(--tw-text-opacity, 1));
+    }
+
+    .text-gray-300 {
+      --tw-text-opacity: 1;
+      color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+    }
+
+    .text-gray-400 {
+      --tw-text-opacity: 1;
+      color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+    }
+
+    .text-gray-500 {
+      --tw-text-opacity: 1;
+      color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+    }
+
+    .text-gray-600 {
+      --tw-text-opacity: 1;
+      color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+    }
+
+    .text-gray-700 {
+      --tw-text-opacity: 1;
+      color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+    }
+
+    .text-gray-900 {
+      --tw-text-opacity: 1;
+      color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+    }
+
+    .text-green-400 {
+      --tw-text-opacity: 1;
+      color: rgb(74 222 128 / var(--tw-text-opacity, 1));
+    }
+
+    .text-green-600 {
+      --tw-text-opacity: 1;
+      color: rgb(22 163 74 / var(--tw-text-opacity, 1));
+    }
+
+    .text-orange-100 {
+      --tw-text-opacity: 1;
+      color: rgb(255 237 213 / var(--tw-text-opacity, 1));
+    }
+
+    .text-orange-400 {
+      --tw-text-opacity: 1;
+      color: rgb(251 146 60 / var(--tw-text-opacity, 1));
+    }
+
+    .text-orange-600 {
+      --tw-text-opacity: 1;
+      color: rgb(234 88 12 / var(--tw-text-opacity, 1));
+    }
+
+    .text-primary-500 {
+      --tw-text-opacity: 1;
+      color: rgb(249 115 22 / var(--tw-text-opacity, 1));
+    }
+
+    .text-primary-600 {
+      --tw-text-opacity: 1;
+      color: rgb(234 88 12 / var(--tw-text-opacity, 1));
+    }
+
+    .text-primary-700 {
+      --tw-text-opacity: 1;
+      color: rgb(194 65 12 / var(--tw-text-opacity, 1));
+    }
+
+    .text-red-500 {
+      --tw-text-opacity: 1;
+      color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+    }
+
+    .text-red-600 {
+      --tw-text-opacity: 1;
+      color: rgb(220 38 38 / var(--tw-text-opacity, 1));
+    }
+
+    .text-transparent {
+      color: transparent;
+    }
+
+    .text-white {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    }
+
+    .opacity-20 {
+      opacity: 0.2;
+    }
+
+    .opacity-30 {
+      opacity: 0.3;
+    }
+
+    .opacity-90 {
+      opacity: 0.9;
+    }
+
+    .mix-blend-multiply {
+      mix-blend-mode: multiply;
+    }
+
+    .shadow-2xl {
+      --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+      --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .shadow-lg {
+      --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .shadow-md {
+      --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .shadow-xl {
+      --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .blur-3xl {
+      --tw-blur: blur(64px);
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    }
+
+    .blur-xl {
+      --tw-blur: blur(24px);
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    }
+
+    .drop-shadow-2xl {
+      --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    }
+
+    .filter {
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    }
+
+    .backdrop-blur-sm {
+      --tw-backdrop-blur: blur(4px);
+      backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    }
+
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .transition-colors {
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .transition-shadow {
+      transition-property: box-shadow;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .transition-transform {
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .duration-300 {
+      transition-duration: 300ms;
+    }
+
+    .ease-in-out {
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gradient-text {
+      background-image: linear-gradient(to right, var(--tw-gradient-stops));
+      --tw-gradient-from: #ea580c var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(234 88 12 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+      --tw-gradient-to: #b45309 var(--tw-gradient-to-position);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hover\:-translate-y-0\.5:hover {
+      --tw-translate-y: -0.125rem;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    .hover\:-translate-y-1:hover {
+      --tw-translate-y: -0.25rem;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    .hover\:scale-105:hover {
+      --tw-scale-x: 1.05;
+      --tw-scale-y: 1.05;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    .hover\:bg-gray-100:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+    }
+
+    .hover\:bg-gray-700:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+    }
+
+    .hover\:bg-gray-800:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+    }
+
+    .hover\:bg-orange-50:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 247 237 / var(--tw-bg-opacity, 1));
+    }
+
+    .hover\:bg-orange-600:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(234 88 12 / var(--tw-bg-opacity, 1));
+    }
+
+    .hover\:bg-orange-700:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(194 65 12 / var(--tw-bg-opacity, 1));
+    }
+
+    .hover\:from-primary-700:hover {
+      --tw-gradient-from: #c2410c var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(194 65 12 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .hover\:to-accent-700:hover {
+      --tw-gradient-to: #92400e var(--tw-gradient-to-position);
+    }
+
+    .hover\:text-orange-300:hover {
+      --tw-text-opacity: 1;
+      color: rgb(253 186 116 / var(--tw-text-opacity, 1));
+    }
+
+    .hover\:text-primary-400:hover {
+      --tw-text-opacity: 1;
+      color: rgb(251 146 60 / var(--tw-text-opacity, 1));
+    }
+
+    .hover\:text-primary-600:hover {
+      --tw-text-opacity: 1;
+      color: rgb(234 88 12 / var(--tw-text-opacity, 1));
+    }
+
+    .hover\:text-primary-700:hover {
+      --tw-text-opacity: 1;
+      color: rgb(194 65 12 / var(--tw-text-opacity, 1));
+    }
+
+    .hover\:text-white:hover {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    }
+
+    .hover\:shadow-2xl:hover {
+      --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+      --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .hover\:shadow-lg:hover {
+      --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .hover\:shadow-xl:hover {
+      --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .group:hover .group-hover\:scale-110 {
+      --tw-scale-x: 1.1;
+      --tw-scale-y: 1.1;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    @media (min-width: 640px) {
+      .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .sm\:flex-row {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .md\:mt-0 {
+        margin-top: 0px;
+      }
+
+      .md\:flex {
+        display: flex;
+      }
+
+      .md\:table-cell {
+        display: table-cell;
+      }
+
+      .md\:hidden {
+        display: none;
+      }
+
+      .md\:h-80 {
+        height: 20rem;
+      }
+
+      .md\:w-80 {
+        width: 20rem;
+      }
+
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .md\:flex-row {
+        flex-direction: row;
+      }
+
+      .md\:px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .md\:text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      .md\:text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+      }
+
+      .md\:text-6xl {
+        font-size: 3.75rem;
+        line-height: 1;
+      }
+
+      .md\:text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\:mx-0 {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+
+      .lg\:table-cell {
+        display: table-cell;
+      }
+
+      .lg\:h-96 {
+        height: 24rem;
+      }
+
+      .lg\:w-96 {
+        width: 24rem;
+      }
+
+      .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .lg\:flex-row {
+        flex-direction: row;
+      }
+
+      .lg\:justify-start {
+        justify-content: flex-start;
+      }
+
+      .lg\:justify-end {
+        justify-content: flex-end;
+      }
+
+      .lg\:text-left {
+        text-align: left;
+      }
+
+      .lg\:text-7xl {
+        font-size: 4.5rem;
+        line-height: 1;
+      }
+    }
+  </style>
+  <meta name="description"
+    content="Framework React ultra-leve (~5kb) com SEO perfeito, sem necessidade de SSR. Deploy simples em qualquer CDN.">
+  <meta name="keywords"
+    content="dashund, react, seo, framework, static generation, spa, javascript, nextjs alternative">
+  <meta property="og:title" content="Dashund - O doguinho que corre atrás do SEO que o React esqueceu">
+  <meta property="og:description"
+    content="Framework React ultra-leve (~5kb) com SEO perfeito, sem necessidade de SSR. Deploy simples em qualquer CDN.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:5173/">
+  <meta property="og:image" content="/dashund_logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dashund - O doguinho que corre atrás do SEO que o React esqueceu">
+  <meta name="twitter:description"
+    content="Framework React ultra-leve (~5kb) com SEO perfeito, sem necessidade de SSR. Deploy simples em qualquer CDN.">
+  <meta name="twitter:image" content="/dashund_logo.png">
+  <link rel="canonical" href="http://localhost:5173/">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Dashund",
+  "description": "Framework React ultra-leve com SEO perfeito",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Luciano Rieth",
+    "url": "https://github.com/lucodifier"
+  }
+}</script>
+</head>
+
+<body>
+  <div id="root">
+    <div class="min-h-screen flex flex-col">
+      <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+        <nav class="container mx-auto px-4 md:px-6 flex items-center justify-between">
+          <div class="flex items-center space-x-3"><img
+              src="./assets/dashund_logo.png"
+              alt="Dashund Logo" class="h-10 w-10"><span
+              class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">Dashund</span>
+          </div>
+          <div class="hidden md:flex items-center space-x-8"><a href="http://localhost:5173/#features"
+              class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Features</a><a
+              href="http://localhost:5173/#why"
+              class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Por quê?</a><a
+              href="http://localhost:5173/#docs"
+              class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Exemplos</a><a
+              href="https://github.com/lucodifier/dashund" target="_blank" rel="noopener noreferrer"
+              class="text-gray-700 hover:text-primary-600 transition-colors font-medium">GitHub</a><a
+              href="http://localhost:5173/#start"
+              class="bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white px-6 py-2 rounded-lg transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Começar</a>
+          </div><button class="md:hidden text-gray-900 hover:text-primary-600 transition-colors"><svg class="w-6 h-6"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg></button>
+        </nav>
+      </header>
+      <main class="flex-grow">
+        <section
+          class="relative pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-100">
+          <div
+            class="absolute top-20 right-10 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse">
+          </div>
+          <div
+            class="absolute bottom-20 left-10 w-96 h-96 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+          </div>
+          <div class="container mx-auto relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+              <div class="flex-1 text-center lg:text-left max-w-2xl">
+                <div
+                  class="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-md mb-6 border border-orange-200">
+                  <span class="text-orange-600 font-semibold text-sm">🐕 Versão 1.0 disponível no NPM!</span></div>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">O doguinho que
+                  corre atrás do <span class="text-orange-600 relative inline-block">SEO<svg
+                      class="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" fill="none">
+                      <path d="M2 8C40 4 80 2 120 4C160 6 180 8 198 6" stroke="#f0741b" stroke-width="4"
+                        stroke-linecap="round"></path>
+                    </svg></span> que o React esqueceu</h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">Framework React <strong
+                    class="text-orange-600">ultra-leve (~5kb)</strong> com SEO perfeito, sem necessidade de SSR
+                  (Server-Side Rendering).</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"><a
+                    href="http://localhost:5173/#start"
+                    class="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"><svg
+                      class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>Começar Agora</a><a href="https://github.com/lucodifier/dashund" target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"><svg
+                      class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12">
+                      </path>
+                    </svg>Ver no GitHub</a></div>
+                <div class="flex flex-wrap gap-8 justify-center lg:justify-start">
+                  <div class="text-center lg:text-left">
+                    <div class="text-3xl font-bold text-orange-600">~5kb</div>
+                    <div class="text-sm text-gray-600">Tamanho gzipped</div>
+                  </div>
+                  <div class="text-center lg:text-left">
+                    <div class="text-3xl font-bold text-orange-600">Zero SSR</div>
+                    <div class="text-sm text-gray-600">Apenas SSG</div>
+                  </div>
+                  <div class="text-center lg:text-left">
+                    <div class="text-3xl font-bold text-orange-600">100%</div>
+                    <div class="text-sm text-gray-600">SEO Score</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 flex justify-center lg:justify-end">
+                <div class="relative">
+                  <div class="absolute inset-0 bg-orange-500 rounded-full filter blur-3xl opacity-20 animate-pulse">
+                  </div><img
+                    src="./assets/dashund_logo.png"
+                    alt="Dashund - Framework React com SEO"
+                    class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain drop-shadow-2xl"
+                    style="animation: 3s ease-in-out 0s infinite normal none running float;">
+                </div>
+              </div>
+            </div>
+            <div class="mt-16 max-w-2xl mx-auto lg:mx-0">
+              <div class="bg-gray-900 text-gray-100 p-6 rounded-xl shadow-2xl flex items-center justify-between"><code
+                  class="flex-1 font-mono text-sm md:text-base">npx dashund create meu-projeto</code><button
+                  class="ml-4 text-orange-400 hover:text-orange-300 transition-colors flex-shrink-0"
+                  title="Copiar comando"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                    </path>
+                  </svg></button></div>
+            </div>
+          </div>
+          <style>
+            @keyframes float {
+
+              0%,
+              100% {
+                transform: translateY(0px);
+              }
+
+              50% {
+                transform: translateY(-20px);
+              }
+            }
+          </style>
+        </section>
+        <section id="features" class="py-20 px-6 bg-white">
+          <div class="container mx-auto">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">✨ Por que Dashund?</h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">Cansado da complexidade do Next.js só para ter SEO? O
+                Dashund resolve isso de forma simples.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 group">
+                <div class="text-orange-600 mb-4 group-hover:scale-110 transition-transform duration-300"><svg
+                    class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                    </path>
+                  </svg></div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Zero SSR</h3>
+                <p class="text-gray-600">Sem servidor Node.js necessário. Funciona com static generation (SSG).</p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 group">
+                <div class="text-orange-600 mb-4 group-hover:scale-110 transition-transform duration-300"><svg
+                    class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg></div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">SEO Perfeito</h3>
+                <p class="text-gray-600">Meta tags, Open Graph, Twitter Cards e JSON-LD automáticos.</p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 group">
+                <div class="text-orange-600 mb-4 group-hover:scale-110 transition-transform duration-300"><svg
+                    class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg></div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Ultra Leve</h3>
+                <p class="text-gray-600">~5kb gzipped - 16x menor que Next.js, sem complexidade.</p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 group">
+                <div class="text-orange-600 mb-4 group-hover:scale-110 transition-transform duration-300"><svg
+                    class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z">
+                    </path>
+                  </svg></div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Static Generation</h3>
+                <p class="text-gray-600">HTML pré-renderizado para cada rota. Perfeito para SEO.</p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 group">
+                <div class="text-orange-600 mb-4 group-hover:scale-110 transition-transform duration-300"><svg
+                    class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                  </svg></div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">SPA Navigation</h3>
+                <p class="text-gray-600">Navegação instantânea sem reload de página. Melhor UX.</p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 group">
+                <div class="text-orange-600 mb-4 group-hover:scale-110 transition-transform duration-300"><svg
+                    class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                    </path>
+                  </svg></div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Dynamic Routes</h3>
+                <p class="text-gray-600">Suporte completo a rotas dinâmicas como /blog/:id.</p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 group">
+                <div class="text-orange-600 mb-4 group-hover:scale-110 transition-transform duration-300"><svg
+                    class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg></div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">CLI Integrado</h3>
+                <p class="text-gray-600">Gerador de projetos como create-react-app. Fácil e rápido.</p>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 group">
+                <div class="text-orange-600 mb-4 group-hover:scale-110 transition-transform duration-300"><svg
+                    class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
+                    </path>
+                  </svg></div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Deploy Simples</h3>
+                <p class="text-gray-600">Funciona em qualquer CDN: Netlify, Vercel, Cloudflare Pages.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="why" class="py-20 px-4 md:px-6 bg-gradient-to-br from-gray-50 to-orange-50">
+          <div class="container mx-auto">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">🤔 Por que usar Dashund?</h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">A solução perfeita para quem quer SEO sem complicação
+              </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-red-200">
+                <div class="flex items-center mb-4"><span class="text-4xl mr-3">😫</span>
+                  <h3 class="text-2xl font-bold text-red-600">O Problema</h3>
+                </div>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start"><span class="text-red-500 mr-2">❌</span><span>Next.js é complexo demais
+                      só para ter SEO</span></li>
+                  <li class="flex items-start"><span class="text-red-500 mr-2">❌</span><span>Necessita servidor Node.js
+                      rodando ($$)</span></li>
+                  <li class="flex items-start"><span class="text-red-500 mr-2">❌</span><span>Bundle enorme: ~80kb+
+                      apenas do framework</span></li>
+                  <li class="flex items-start"><span class="text-red-500 mr-2">❌</span><span>Curva de aprendizado
+                      íngreme</span></li>
+                  <li class="flex items-start"><span class="text-red-500 mr-2">❌</span><span>Create React App não tem
+                      SEO nativo</span></li>
+                </ul>
+              </div>
+              <div
+                class="bg-gradient-to-br from-primary-500 to-accent-600 p-8 rounded-2xl shadow-xl text-white transform hover:scale-105 transition-transform duration-300">
+                <div class="flex items-center mb-4"><span class="text-4xl mr-3">🐕</span>
+                  <h3 class="text-2xl font-bold">A Solução: Dashund</h3>
+                </div>
+                <ul class="space-y-3">
+                  <li class="flex items-start"><span class="mr-2">✅</span><span>Simples como Create React App</span>
+                  </li>
+                  <li class="flex items-start"><span class="mr-2">✅</span><span>Deploy em qualquer CDN (grátis!)</span>
+                  </li>
+                  <li class="flex items-start"><span class="mr-2">✅</span><span>Apenas ~5kb gzipped (16x menor!)</span>
+                  </li>
+                  <li class="flex items-start"><span class="mr-2">✅</span><span>Aprenda em 5 minutos</span></li>
+                  <li class="flex items-start"><span class="mr-2">✅</span><span>SEO perfeito automático</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="text-3xl mb-3">💰</div>
+                <h4 class="font-bold text-gray-900 mb-2">Economia Real</h4>
+                <p class="text-gray-600 text-sm">Sem custos de servidor. Deploy gratuito em CDN.</p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="text-3xl mb-3">⚡</div>
+                <h4 class="font-bold text-gray-900 mb-2">Performance</h4>
+                <p class="text-gray-600 text-sm">Sites ultrarrápidos com static generation.</p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="text-3xl mb-3">🎯</div>
+                <h4 class="font-bold text-gray-900 mb-2">SEO 100%</h4>
+                <p class="text-gray-600 text-sm">Google, Facebook, Twitter - todos felizes.</p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div class="text-3xl mb-3">🚀</div>
+                <h4 class="font-bold text-gray-900 mb-2">Deploy Fácil</h4>
+                <p class="text-gray-600 text-sm">Build e deploy em minutos, não horas.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="docs" class="py-20 px-4 md:px-6 bg-gray-900 text-white">
+          <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+              <h2 class="text-4xl md:text-5xl font-bold mb-4">💻 Super Simples de Usar</h2>
+              <p class="text-xl text-gray-300">Veja como é fácil criar um site React com SEO perfeito</p>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6 justify-center"><button
+                class="px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-gray-800 text-gray-300 hover:bg-gray-700">Setup
+                Básico</button><button
+                class="px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-gray-800 text-gray-300 hover:bg-gray-700">Componente
+                com SEO</button><button
+                class="px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-primary-600 to-accent-600 text-white shadow-lg">Build
+                para Produção</button></div>
+            <div class="relative">
+              <div class="absolute top-4 right-4 z-10"><button
+                  class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center space-x-2"><svg
+                    class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                    </path>
+                  </svg><span>Copiar</span></button></div>
+              <div class="bg-gray-950 rounded-xl p-6 overflow-x-auto shadow-2xl border border-gray-800">
+                <div class="flex items-center space-x-2 mb-4 pb-4 border-b border-gray-800">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500"></div><span
+                    class="ml-4 text-gray-400 text-sm font-mono">Build para Produção.bash</span>
+                </div>
+                <pre class="text-sm md:text-base"><code class="font-mono text-gray-100 whitespace-pre"># Criar projeto
+npx dashund create meu-projeto
+
+# Desenvolver
+npm run dev
+
+# Build com SEO automático
+npm run build
+
+# Resultado:
+# dist/
+# ├── index.html        ← SEO completo
+# ├── blog/
+# │   ├── index.html    ← SEO da listagem
+# │   └── 1/index.html  ← SEO do post 1
+# └── assets/
+#     ├── bundle.js
+#     └── styles.css
+
+# Deploy (escolha um):
+netlify deploy --dir=dist
+vercel --prod
+# ou arraste para Cloudflare Pages</code></pre>
+              </div>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <div class="flex items-start space-x-3"><span class="text-2xl">🎣</span>
+                <div>
+                  <h4 class="font-bold mb-1">Hooks Poderosos</h4>
+                  <p class="text-gray-400 text-sm">useSEO, useParams, useNavigate</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3"><span class="text-2xl">🛣️</span>
+                <div>
+                  <h4 class="font-bold mb-1">Rotas Dinâmicas</h4>
+                  <p class="text-gray-400 text-sm">/blog/:id, /user/:name</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3"><span class="text-2xl">📊</span>
+                <div>
+                  <h4 class="font-bold mb-1">JSON-LD Schema</h4>
+                  <p class="text-gray-400 text-sm">Structured data automático</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-20 px-4 md:px-6 bg-white">
+          <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">📁 Templates Prontos</h2>
+              <p class="text-xl text-gray-600">Comece com um template completo e pronto para produção</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div
+                class="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl shadow-lg border-2 border-orange-200 hover:shadow-2xl transition-shadow">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-2xl font-bold text-gray-900">Blog Template</h3><span
+                    class="bg-orange-600 text-white text-xs px-3 py-1 rounded-full font-semibold">Padrão</span>
+                </div>
+                <p class="text-gray-700 mb-6">Blog completo com Tailwind CSS, páginas pré-configuradas e SEO otimizado.
+                </p>
+                <div class="space-y-3 mb-6">
+                  <div class="flex items-center text-gray-700"><svg class="w-5 h-5 text-green-600 mr-2" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>Home Page com hero e features</div>
+                  <div class="flex items-center text-gray-700"><svg class="w-5 h-5 text-green-600 mr-2" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>Blog Listing com cards</div>
+                  <div class="flex items-center text-gray-700"><svg class="w-5 h-5 text-green-600 mr-2" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>Rotas dinâmicas (/blog/:id)</div>
+                  <div class="flex items-center text-gray-700"><svg class="w-5 h-5 text-green-600 mr-2" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>Tailwind CSS configurado</div>
+                  <div class="flex items-center text-gray-700"><svg class="w-5 h-5 text-green-600 mr-2" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>SEO completo e automático</div>
+                </div>
+                <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">npx dashund create meu-blog
+                </div>
+              </div>
+              <div
+                class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg border-2 border-gray-200 flex flex-col justify-center items-center text-center">
+                <div class="text-6xl mb-4">🚀</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Mais Templates em Breve</h3>
+                <p class="text-gray-600 mb-6">Estamos trabalhando em mais templates incríveis:</p>
+                <ul class="space-y-2 text-gray-700 text-left">
+                  <li class="flex items-center"><span class="mr-2">📱</span><span>Landing Page</span></li>
+                  <li class="flex items-center"><span class="mr-2">🛍️</span><span>E-commerce</span></li>
+                  <li class="flex items-center"><span class="mr-2">📚</span><span>Documentação</span></li>
+                  <li class="flex items-center"><span class="mr-2">💼</span><span>Portfolio</span></li>
+                </ul><a href="https://github.com/lucodifier/dashund" target="_blank" rel="noopener noreferrer"
+                  class="mt-6 text-primary-600 hover:text-primary-700 font-semibold inline-flex items-center">Contribua
+                  no GitHub<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="mt-12 bg-gray-50 p-8 rounded-2xl border border-gray-200">
+              <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center"><svg
+                  class="w-6 h-6 mr-2 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                </svg>Estrutura do Projeto</h4>
+              <div class="bg-gray-900 text-gray-100 p-6 rounded-xl font-mono text-sm overflow-x-auto">
+                <pre>meu-blog/
+├── src/
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Blog.jsx
+│   │   ├── BlogPost.jsx
+│   │   └── About.jsx
+│   ├── components/
+│   │   ├── Layout.jsx
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   └── Card.jsx
+│   ├── data/
+│   │   └── posts.js
+│   ├── App.jsx
+│   └── index.js
+├── public/
+│   └── styles.css
+├── index.html
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+└── dashund.config.js</pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-20 px-4 md:px-6 bg-gradient-to-br from-gray-50 to-orange-50">
+          <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">📊 Comparação</h2>
+              <p class="text-xl text-gray-600">Veja como o Dashund se compara com outras soluções</p>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+                <thead>
+                  <tr class="bg-gradient-to-r from-primary-600 to-accent-600 text-white">
+                    <th class="px-4 md:px-6 py-4 text-left font-bold">Feature</th>
+                    <th class="px-4 md:px-6 py-4 text-center font-bold">
+                      <div class="flex flex-col items-center"><span class="text-2xl mb-1">🐕</span><span>Dashund</span>
+                      </div>
+                    </th>
+                    <th class="px-4 md:px-6 py-4 text-center font-bold hidden md:table-cell">Next.js</th>
+                    <th class="px-4 md:px-6 py-4 text-center font-bold hidden lg:table-cell">Create React App</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr class="hover:bg-orange-50 transition-colors">
+                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-900">Tamanho</td>
+                    <td class="px-4 md:px-6 py-4 text-center"><span class="text-green-600 font-bold">~5kb</span></td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden md:table-cell">~80kb</td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden lg:table-cell">~45kb</td>
+                  </tr>
+                  <tr class="hover:bg-orange-50 transition-colors">
+                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-900">SSR</td>
+                    <td class="px-4 md:px-6 py-4 text-center"><span class="text-orange-600 font-bold">❌ SSG</span></td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden md:table-cell">✅</td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden lg:table-cell">❌</td>
+                  </tr>
+                  <tr class="hover:bg-orange-50 transition-colors">
+                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-900">SEO</td>
+                    <td class="px-4 md:px-6 py-4 text-center"><span class="text-green-600 font-bold text-xl">✅</span>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center text-xl hidden md:table-cell">✅</td>
+                    <td class="px-4 md:px-6 py-4 text-center text-xl hidden lg:table-cell">❌</td>
+                  </tr>
+                  <tr class="hover:bg-orange-50 transition-colors">
+                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-900">Servidor Node</td>
+                    <td class="px-4 md:px-6 py-4 text-center"><span class="text-green-600 font-bold text-xl">❌</span>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 text-xl hidden md:table-cell">✅</td>
+                    <td class="px-4 md:px-6 py-4 text-center text-xl hidden lg:table-cell">❌</td>
+                  </tr>
+                  <tr class="hover:bg-orange-50 transition-colors">
+                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-900">Deploy</td>
+                    <td class="px-4 md:px-6 py-4 text-center"><span class="text-green-600 font-bold">Qualquer CDN</span>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden md:table-cell">Vercel/Node</td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden lg:table-cell">Qualquer CDN</td>
+                  </tr>
+                  <tr class="hover:bg-orange-50 transition-colors">
+                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-900">Complexidade</td>
+                    <td class="px-4 md:px-6 py-4 text-center"><span class="text-green-600 font-bold">🟢 Baixa</span>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden md:table-cell">🟡 Média</td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden lg:table-cell">🟢 Baixa</td>
+                  </tr>
+                  <tr class="hover:bg-orange-50 transition-colors">
+                    <td class="px-4 md:px-6 py-4 font-semibold text-gray-900">Learning Curve</td>
+                    <td class="px-4 md:px-6 py-4 text-center"><span class="text-green-600 font-bold">🟢 Suave</span>
+                    </td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden md:table-cell">🟡 Íngreme</td>
+                    <td class="px-4 md:px-6 py-4 text-center text-gray-600 hidden lg:table-cell">🟢 Suave</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+              <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="text-4xl font-bold text-primary-600 mb-2">16x</div>
+                <div class="text-gray-700">Menor que Next.js</div>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="text-4xl font-bold text-primary-600 mb-2">$0</div>
+                <div class="text-gray-700">Custo de servidor</div>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="text-4xl font-bold text-primary-600 mb-2">5min</div>
+                <div class="text-gray-700">Para aprender</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="start" class="py-20 px-4 md:px-6 bg-gradient-to-br from-primary-600 to-accent-600 text-white">
+          <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12">
+              <h2 class="text-4xl md:text-5xl font-bold mb-4">🚀 Pronto para Começar?</h2>
+              <p class="text-xl text-orange-100">Crie seu primeiro projeto Dashund em menos de 1 minuto</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+              <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                <div
+                  class="bg-white text-primary-600 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4">
+                  1</div>
+                <h3 class="text-xl font-bold mb-2">Criar Projeto</h3>
+                <p class="text-orange-100 mb-4">Use o CLI para gerar um projeto completo</p>
+                <div class="bg-gray-900/50 p-3 rounded-lg font-mono text-sm">npx dashund create meu-app</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                <div
+                  class="bg-white text-primary-600 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4">
+                  2</div>
+                <h3 class="text-xl font-bold mb-2">Desenvolver</h3>
+                <p class="text-orange-100 mb-4">Inicie o servidor de desenvolvimento</p>
+                <div class="bg-gray-900/50 p-3 rounded-lg font-mono text-sm">cd meu-app<br>npm install<br>npm run dev
+                </div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                <div
+                  class="bg-white text-primary-600 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4">
+                  3</div>
+                <h3 class="text-xl font-bold mb-2">Deploy</h3>
+                <p class="text-orange-100 mb-4">Build e deploy em qualquer CDN</p>
+                <div class="bg-gray-900/50 p-3 rounded-lg font-mono text-sm">npm run build<br># Deploy dist/ folder
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 inline-block">
+                <div class="mb-6">
+                  <div class="text-6xl mb-4 animate-bounce-slow">🐕</div>
+                  <h3 class="text-2xl font-bold mb-2">Comece Agora!</h3>
+                  <p class="text-orange-100">Instale o Dashund e crie sites incríveis com SEO perfeito</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center"><a
+                    href="https://github.com/lucodifier/dashund" target="_blank" rel="noopener noreferrer"
+                    class="bg-white text-primary-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center justify-center"><svg
+                      class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12">
+                      </path>
+                    </svg>Ver no GitHub</a><a href="https://www.npmjs.com/package/dashund" target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center justify-center"><svg
+                      class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z">
+                      </path>
+                    </svg>Ver no NPM</a></div>
+              </div>
+            </div>
+            <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm"><a
+                href="https://github.com/lucodifier/dashund" target="_blank" rel="noopener noreferrer"
+                class="text-orange-100 hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-1"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                  </path>
+                </svg>Documentação</a><a href="https://github.com/lucodifier/dashund/issues" target="_blank"
+                rel="noopener noreferrer"
+                class="text-orange-100 hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-1"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>Issues</a><a href="https://github.com/lucodifier/dashund/discussions" target="_blank"
+                rel="noopener noreferrer"
+                class="text-orange-100 hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-1"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">
+                  </path>
+                </svg>Discussões</a></div>
+          </div>
+        </section>
+      </main>
+      <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div class="flex items-center space-x-3 mb-4"><img
+                  src="./assets/dashund_logo.png"
+                  alt="Dashund Logo" class="h-10 w-10">
+                <h3
+                  class="text-2xl font-bold bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">
+                  Dashund</h3>
+              </div>
+              <p class="text-gray-400 text-sm">O doguinho que corre atrás do SEO que o React esqueceu. Framework React
+                ultra-leve (~5kb) com SEO perfeito.</p>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4 text-primary-500">Produto</h4>
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li><a href="http://localhost:5173/#features" class="hover:text-white transition-colors">Features</a>
+                </li>
+                <li><a href="http://localhost:5173/#why" class="hover:text-white transition-colors">Por quê?</a></li>
+                <li><a href="http://localhost:5173/#docs" class="hover:text-white transition-colors">Exemplos</a></li>
+                <li><a href="http://localhost:5173/#start" class="hover:text-white transition-colors">Começar</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4 text-primary-500">Recursos</h4>
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li><a href="https://github.com/lucodifier/dashund" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors">Documentação</a></li>
+                <li><a href="https://github.com/lucodifier/dashund/issues" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors">Issues</a></li>
+                <li><a href="https://github.com/lucodifier/dashund/discussions" target="_blank"
+                    rel="noopener noreferrer" class="hover:text-white transition-colors">Discussões</a></li>
+                <li><a href="https://www.npmjs.com/package/dashund" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors">NPM Package</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4 text-primary-500">Contato</h4>
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li><a href="https://github.com/lucodifier" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-2"
+                      fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12">
+                      </path>
+                    </svg>@lucodifier</a></li>
+                <li><a href="mailto:lucodifier@gmail.com"
+                    class="hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-2" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                      </path>
+                    </svg>lucodifier@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-center text-gray-400 text-sm">
+            <p>© 2025 Dashund. MIT License.</p>
+            <p class="mt-2 md:mt-0">Feito com ❤️ e 🐕 por <a href="https://github.com/lucodifier" target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary-500 hover:text-primary-400 transition-colors font-semibold">Luciano Rieth</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script type="module" src="http://localhost:5173/src/index.js"></script>
+
+
+
+</body>
+
+</html>
