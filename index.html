@@ -1896,8 +1896,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
               class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Por quê?</a><a
               href="#docs"
               class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Exemplos</a><a
-              id="docs-link" href="http://localhost:5174/"
-              class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Documentação</a><a
               href="https://github.com/lucodifier/dachshund" target="_blank" rel="noopener noreferrer"
               class="text-gray-700 hover:text-primary-600 transition-colors font-medium">GitHub</a><a
               href="#start"
@@ -1975,7 +1973,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
             <div class="mt-16 max-w-2xl mx-auto lg:mx-0">
               <div class="bg-gray-900 text-gray-100 p-6 rounded-xl shadow-2xl flex items-center justify-between"><code
                   class="flex-1 font-mono text-sm md:text-base">npx dachshund create meu-projeto</code><button
-                  class="ml-4 text-orange-400 hover:text-orange-300 transition-colors flex-shrink-0"
+                  data-copy class="ml-4 text-orange-400 hover:text-orange-300 transition-colors flex-shrink-0"
                   title="Copiar comando"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
@@ -2172,7 +2170,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 class="px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-primary-600 to-accent-600 text-white shadow-lg">Build
                 para Produção</button></div>
             <div class="relative">
-              <div class="absolute top-4 right-4 z-10"><button
+              <div class="absolute top-4 right-4 z-10"><button data-copy
                   class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center space-x-2"><svg
                     class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -2513,15 +2511,12 @@ vercel --prod
                 </li>
                 <li><a href="#why" class="hover:text-white transition-colors">Por quê?</a></li>
                 <li><a href="#docs" class="hover:text-white transition-colors">Exemplos</a></li>
-                <li><a id="docs-footer-link" href="http://localhost:5174/" class="hover:text-white transition-colors">Documentação</a></li>
                 <li><a href="#start" class="hover:text-white transition-colors">Começar</a></li>
               </ul>
             </div>
             <div>
               <h4 class="font-bold mb-4 text-primary-500">Recursos</h4>
               <ul class="space-y-2 text-gray-400 text-sm">
-                <li><a href="https://github.com/lucodifier/dachshund" target="_blank" rel="noopener noreferrer"
-                    class="hover:text-white transition-colors">Documentação</a></li>
                 <li><a href="https://github.com/lucodifier/dachshund/issues" target="_blank" rel="noopener noreferrer"
                     class="hover:text-white transition-colors">Issues</a></li>
                 <li><a href="https://github.com/lucodifier/dachshund/discussions" target="_blank"
@@ -2566,5 +2561,61 @@ vercel --prod
 
 
 </body>
+
+<script>
+  (function () {
+    function getTextToCopy(button) {
+      const codeBlock = button.closest('.relative')?.querySelector('pre code');
+      if (codeBlock) return codeBlock.textContent.trim();
+
+      const container = button.closest('div');
+      const inlineCode = container ? container.querySelector('code') : null;
+      return inlineCode ? inlineCode.textContent.trim() : '';
+    }
+
+    function setCopiedState(button) {
+      const originalTitle = button.getAttribute('title');
+      const originalHtml = button.innerHTML;
+      button.setAttribute('data-original-title', originalTitle || '');
+      button.setAttribute('data-original-html', originalHtml);
+      button.setAttribute('title', 'Copiado!');
+      if (button.querySelector('span')) {
+        button.querySelector('span').textContent = 'Copiado!';
+      }
+      button.classList.add('ring-2', 'ring-green-500');
+      setTimeout(() => {
+        button.setAttribute('title', button.getAttribute('data-original-title'));
+        const html = button.getAttribute('data-original-html');
+        if (html) button.innerHTML = html;
+        button.classList.remove('ring-2', 'ring-green-500');
+      }, 1600);
+    }
+
+    document.addEventListener('click', async (ev) => {
+      const btn = ev.target.closest('button[data-copy]');
+      if (!btn) return;
+      const text = getTextToCopy(btn);
+      if (!text) return;
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.top = '-1000px';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        setCopiedState(btn);
+      } catch (e) {
+        console.error('Falha ao copiar', e);
+      }
+    }, { passive: true });
+  })();
+</script>
 
 </html>
