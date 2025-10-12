@@ -1,6 +1,6 @@
-# 🐕 Dachshund Blog Template
+# 🐕 Dachshund Framework Template
 
-Aplicação blog completa usando Dachshund Framework + Tailwind CSS
+Aplicação completa usando Dachshund Framework + Tailwind CSS
 
 ## 🚀 Como usar
 

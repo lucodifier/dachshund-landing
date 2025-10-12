@@ -50,12 +50,6 @@ export default function Home({ navigate }) {
           </p>
           <div className="flex gap-4 justify-center">
             <button 
-              onClick={() => navigate('/blog')}
-              className="btn-primary"
-            >
-              Ver Blog
-            </button>
-            <button 
               onClick={() => navigate('/about')}
               className="btn-secondary"
             >

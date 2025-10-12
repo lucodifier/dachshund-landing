@@ -3,7 +3,6 @@ import React from 'react';
 export default function Header({ navigate }) {
   const navItems = [
     { label: 'Home', path: '/' },
-    { label: 'Blog', path: '/blog' },
     { label: 'Sobre', path: '/about' }
   ];
 

@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 
 const app = new Dachshund({
-  baseUrl: 'https://dachshund-blog.com',
+  baseUrl: 'https://dachshund-framework.com',
   scrollToTop: true
 });
 
