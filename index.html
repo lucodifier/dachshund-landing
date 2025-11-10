@@ -1969,7 +1969,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
             </div>
             <div class="mt-16 max-w-2xl mx-auto lg:mx-0">
               <div class="bg-gray-900 text-gray-100 p-6 rounded-xl shadow-2xl flex items-center justify-between"><code
-                  class="flex-1 font-mono text-sm md:text-base">npx dachshund create meu-projeto</code><button data-copy
+                  class="flex-1 font-mono text-sm md:text-base">npx create-dachshund meu-blog</code><button data-copy
                   class="ml-4 text-orange-400 hover:text-orange-300 transition-colors flex-shrink-0"
                   title="Copiar comando"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -2182,7 +2182,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     class="ml-4 text-gray-400 text-sm font-mono">Build para Produção.bash</span>
                 </div>
                 <pre class="text-sm md:text-base"><code id="snippet-code" class="font-mono text-gray-100 whitespace-pre"># Criar projeto
-                npx dachshund create meu-projeto
+                npx create-dachshund meu-blog
 
 # Desenvolver
 npm run dev
@@ -2265,7 +2265,7 @@ vercel --prod
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>SEO completo e automático</div>
                 </div>
-                <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">npx dachshund create meu-blog
+                <div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm">npx create-dachshund meu-blog
                 </div>
               </div>
               <div
@@ -2415,7 +2415,7 @@ vercel --prod
                   1</div>
                 <h3 class="text-xl font-bold mb-2">Criar Projeto</h3>
                 <p class="text-orange-100 mb-4">Use o CLI para gerar um projeto completo</p>
-                <div class="bg-gray-900/50 p-3 rounded-lg font-mono text-sm">npx dachshund create meu-app</div>
+                <div class="bg-gray-900/50 p-3 rounded-lg font-mono text-sm">npx create-dachshund meu-blog</div>
               </div>
               <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
                 <div
@@ -2606,7 +2606,7 @@ vercel --prod
     const snippets = {
       setup: {
         label: 'Setup Básico.bash',
-        code: `# Instalar/Inicializar\nnpx dachshund create meu-projeto\ncd meu-projeto\nnpm install\n\n# Rodar dev\nnpm run dev`,
+        code: `# Instalar/Inicializar\nnpx create-dachshund meu-blog\ncd meu-blog\nnpm install\n\n# Rodar dev\nnpm run dev`,
       },
       component: {
         label: 'Componente com SEO.jsx',
@@ -2614,7 +2614,7 @@ vercel --prod
       },
       build: {
         label: 'Build para Produção.bash',
-        code: `# Criar projeto\nnpx dachshund create meu-projeto\n\n# Desenvolver\nnpm run dev\n\n# Build com SEO automático\nnpm run build\n\n# Resultado:\n# dist/\n# ├── index.html        ← SEO completo\n# ├── blog/\n# │   ├── index.html    ← SEO da listagem\n# │   └── 1/index.html  ← SEO do post 1\n# └── assets/\n#     ├── bundle.js\n#     └── styles.css\n\n# Deploy (escolha um):\nnetlify deploy --dir=dist\nvercel --prod\n# ou arraste para Cloudflare Pages`,
+        code: `# Criar projeto\nnpx create-dachshund meu-blog\n\n# Desenvolver\nnpm run dev\n\n# Build com SEO automático\nnpm run build\n\n# Resultado:\n# dist/\n# ├── index.html        ← SEO completo\n# ├── blog/\n# │   ├── index.html    ← SEO da listagem\n# │   └── 1/index.html  ← SEO do post 1\n# └── assets/\n#     ├── bundle.js\n#     └── styles.css\n\n# Deploy (escolha um):\nnetlify deploy --dir=dist\nvercel --prod\n# ou arraste para Cloudflare Pages`,
       },
     };
 
